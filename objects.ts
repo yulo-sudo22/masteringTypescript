@@ -1,3 +1,4 @@
+//Type Aliases
 type Point = {
     x: number,
     y: number
@@ -12,3 +13,35 @@ function randomCoordinate(): Point {
 function doublePoint(point: Point): Point {
     return {x: point.x * 2, y:point.y * 2}
 }
+
+// Nested Object
+
+type Song = {
+    title: string;
+    artist: string;
+    numStream: number
+    credits: {
+        writer: string
+    }
+}
+
+function calculatePayout(song: Song):number{
+    return song.numStream * 0.0033
+}
+
+function printSong(song: Song):void {
+    console.log(`${song.title} - ${song.artist}`)
+}
+
+const mySong: Song = {
+    title: "Cada criança com o seu olhar",
+    artist: "Chorão",
+    numStream: 298349,
+    credits: {
+        writer: "Chorão"
+    }
+}
+
+const earnings = calculatePayout(mySong)
+console.log(earnings)
+printSong(mySong)
