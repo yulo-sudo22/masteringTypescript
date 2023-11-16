@@ -45,3 +45,25 @@ const mySong: Song = {
 const earnings = calculatePayout(mySong)
 console.log(earnings)
 printSong(mySong)
+
+// Intersection Types
+
+type cat = {
+    numLives: number
+}
+
+type dog = {
+    breed: string
+}
+
+type CatDog = dog & cat & {
+    age: number
+}
+
+let Bob:CatDog = {
+    age: 22,
+    numLives: 1,
+    breed: "Husky",
+}
+
+console.log(Bob)
