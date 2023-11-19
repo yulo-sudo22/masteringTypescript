@@ -1,6 +1,6 @@
 const age: number[] = []
 
-const gameBoard: string[][] = [[]]
+const gameBoard: string[][] = []
 
 type Product = {
     name: string,
